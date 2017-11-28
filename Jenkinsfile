@@ -1,8 +1,8 @@
 stage('compile') {
-    ./gradlew classes
+    gradlew classes
 }
 stage('test') {
-    ./gradlew test
+    gradlew test
 }
 stage('Proceed?') {
     input message: 'Proceed?'
