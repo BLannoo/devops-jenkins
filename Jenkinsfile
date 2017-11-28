@@ -1,12 +1,12 @@
-stage('This is a stage') {
-    echo "This is a stage"
+stage('compile') {
+    ./gradlew classes
 }
-stage('Another stage!') {
-    echo "Another stage!"
+stage('test') {
+    ./gradlew test
 }
 stage('Proceed?') {
     input message: 'Proceed?'
 }
-stage('Finished') {
-    echo "Finished"
+stage('deploy') {
+    echo "deploy"
 }
